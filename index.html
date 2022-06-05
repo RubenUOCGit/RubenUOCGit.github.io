@@ -1,12 +1,43 @@
+</body> 
+</html>
+
 <!DOCTYPE html> 
 <html> 
 <body> 
 
-<video width="400" controls>
-  <source src="asset-02_edit.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="asset-02_edit" autoplay width="420">
+    <source src="asset-02_edit.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+<script> 
+var myVideo = document.getElementById("asset-02_edit"); 
 
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
 
 </body> 
 </html>
